@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corner Stone Hospital, Kabba | Trusted care for your family</title>
+  <meta name="description" content="Corner Stone Hospital in Kabba, Kogi State. Emergency care, maternity, children's health, surgery and laboratory services. Request an appointment online.">
+  <meta name="theme-color" content="#12283F">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <!-- Icons used across the page -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  </svg>
+
+  <!-- Emergency bar. ADD: your real emergency number (Ctrl+H in VS Code to replace 080 0000 0000 everywhere) -->
+  <div class="alert-bar">
+    <div class="wrap">
+      <span>Medical emergency? We are open 24 hours, every day.</span>
+      <a href="tel:08000000000">080 0000 0000</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="Corner Stone Hospital, home">
+        <svg viewBox="0 0 38 38" aria-hidden="true">
+          <path d="M2 38V14A12 12 0 0 1 14 2h24v36z" fill="#0E7C7B"/>
+          <rect x="15" y="15" width="16" height="16" fill="#F8FAF9"/>
+          <path d="M23 18v10M18 23h10" stroke="#0E7C7B" stroke-width="3" stroke-linecap="square"/>
+        </svg>
+        <span class="brand-name">Corner Stone Hospital<small>Kabba, Kogi State</small></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#patients">Patient information</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="btn btn-primary" href="#book">Book appointment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <h1 id="hero-title">Trusted care for your family, right here in Kabba.</h1>
+            <p class="hero-lede">From emergencies to check-ups, births to surgery, our doctors and nurses look after you under one roof. Request an appointment in a minute, or call us any time.</p>
+            <div class="hero-actions">
+              <a class="btn btn-bright" href="#book"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>Book appointment</a>
+              <a class="btn btn-outline light" href="#services">See our services</a>
+            </div>
+          </div>
+
+          <div class="book" id="book">
+            <div class="form-head">
+              <h2>Request an appointment</h2>
+              <p class="sub">Tell us what you need. Our front desk will call to confirm a time.</p>
+            </div>
+
+            <form id="bookForm" novalidate>
+              <div class="field" data-field="name">
+                <label for="fullName">Full name</label>
+                <input id="fullName" name="fullName" type="text" autocomplete="name" required>
+                <div class="error" role="alert">Enter your full name.</div>
+              </div>
+
+              <div class="field" data-field="phone">
+                <label for="phone">Phone number</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+                <div class="error" role="alert">Enter a phone number we can call.</div>
+              </div>
+
+              <div class="field" data-field="dept">
+                <label for="dept">What do you need?</label>
+                <select id="dept" name="dept" required>
+                  <option value="">Choose a service</option>
+                  <option>General medicine</option>
+                  <option>Maternity and antenatal care</option>
+                  <option>Children's health</option>
+                  <option>Surgery consultation</option>
+                  <option>Laboratory tests</option>
+                  <option>Other or not sure</option>
+                </select>
+                <div class="error" role="alert">Choose a service.</div>
+              </div>
+
+              <div class="row-2">
+                <div class="field" data-field="date">
+                  <label for="date">Preferred date</label>
+                  <input id="date" name="date" type="date" required>
+                  <div class="error" role="alert">Choose today or a later date.</div>
+                </div>
+                <div class="field">
+                  <label for="time">Preferred time</label>
+                  <select id="time" name="time">
+                    <option>Morning</option>
+                    <option>Afternoon</option>
+                    <option>Evening</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="reason">Reason for visit <span class="hint">(optional)</span></label>
+                <textarea id="reason" name="reason" rows="2"></textarea>
+              </div>
+
+              <button class="btn btn-primary btn-block" type="submit">Send request</button>
+              <p class="form-note">For emergencies, do not use this form. Call <a href="tel:08000000000">080 0000 0000</a> or come straight to the emergency department.</p>
+            </form>
+
+            <div class="confirm" id="confirm" role="status" aria-live="polite" tabindex="-1">
+              <div class="tick"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div>
+              <h2>Request received</h2>
+              <p id="confirmText"></p>
+              <a class="btn btn-primary" id="waLink" href="#" target="_blank" rel="noopener" hidden>Also send on WhatsApp</a>
+              <button class="btn btn-outline dark" type="button" id="newRequest">Make another request</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick facts. CONFIRM: all hours below -->
+    <section class="facts" aria-label="Opening times at a glance">
+      <div class="wrap">
+        <div class="facts-grid">
+          <article class="fact emergency">
+            <h3>Emergency department</h3>
+            <p>Open 24 hours, every day. Call <a href="tel:08000000000">080 0000 0000</a>.</p>
+          </article>
+          <article class="fact teal">
+            <h3>Outpatient clinics</h3>
+            <p>Monday to Saturday, 8:00 am to 6:00 pm.</p>
+          </article>
+          <article class="fact">
+            <h3>Pharmacy and laboratory</h3>
+            <p>Open 24 hours for admitted patients and walk-ins.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services. CONFIRM: keep only the services the hospital really offers -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="services-grid">
+          <div class="services-intro">
+            <h2 id="services-title">Services for every stage of life</h2>
+            <p>Open any service to see what we treat. If you are unsure where to start, choose general medicine and our doctors will guide you to the right care.</p>
+            <a class="btn btn-primary" href="#book">Book appointment</a>
+          </div>
+
+          <div class="service-list">
+            <details name="service" open>
+              <summary>Emergency care</summary>
+              <div class="service-body">
+                <p>A trained team is on duty around the clock to assess and treat serious illness and injury. No appointment is needed.</p>
+                <ul aria-label="Conditions treated">
+                  <li>Accidents and injuries</li><li>Chest pain</li><li>Breathing difficulty</li><li>Severe bleeding</li><li>Fever in children</li>
+                </ul>
+                <a class="link" href="tel:08000000000">Call the emergency line</a>
+              </div>
+            </details>
+
+            <details name="service">
+              <summary>General medicine</summary>
+              <div class="service-body">
+                <p>Your first stop for check-ups, ongoing conditions and health screening.</p>
+                <ul aria-label="What we handle">
+                  <li>Routine check-ups</li><li>Blood pressure and diabetes care</li><li>Malaria and other infections</li><li>Medical examinations</li>
+                </ul>
+                <a class="link" href="#book" data-pick="General medicine">Request a visit</a>
+              </div>
+            </details>
+
+            <details name="service">
+              <summary>Maternity and antenatal care</summary>
+              <div class="service-body">
+                <p>Antenatal clinics, safe delivery and postnatal care for mother and baby.</p>
+                <ul aria-label="What we handle">
+                  <li>Antenatal clinic</li><li>Delivery</li><li>Postnatal care</li><li>Family planning</li>
+                </ul>
+                <a class="link" href="#book" data-pick="Maternity and antenatal care">Request a visit</a>
+              </div>
+            </details>
+
+            <details name="service">
+              <summary>Children's health</summary>
+              <div class="service-body">
+                <p>Gentle, patient care for babies, children and teenagers, from immunisation to treating illness quickly.</p>
+                <ul aria-label="What we handle">
+                  <li>Immunisation</li><li>Child wellness checks</li><li>Childhood illness</li><li>Newborn care</li>
+                </ul>
+                <a class="link" href="#book" data-pick="Children's health">Request a visit</a>
+              </div>
+            </details>
+
+            <details name="service">
+              <summary>Surgery</summary>
+              <div class="service-body">
+                <p>Planned and urgent operations, with clear explanations before and after your procedure.</p>
+                <ul aria-label="What we handle">
+                  <li>General surgery</li><li>Minor procedures</li><li>Pre- and post-operative care</li>
+                </ul>
+                <a class="link" href="#book" data-pick="Surgery consultation">Book a consultation</a>
+              </div>
+            </details>
+
+            <details name="service">
+              <summary>Laboratory and pharmacy</summary>
+              <div class="service-body">
+                <p>Tests done on site so you get answers faster, and prescribed medicines dispensed with clear dosage guidance.</p>
+                <ul aria-label="What we handle">
+                  <li>Blood and urine tests</li><li>Prescription medicines</li><li>Dosage guidance</li>
+                </ul>
+                <a class="link" href="#book" data-pick="Laboratory tests">Request a test</a>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="about-grid">
+          <div>
+            <h2 id="about-title">Named for the stone that sets the line</h2>
+            <p>A cornerstone is the first stone laid in a building. Every other stone is placed in relation to it, so it has to be true. That is how we think about patient safety: get the first things right, every time, and everything built on them stands.</p>
+            <p>Corner Stone Hospital serves families in Kabba and the surrounding area, with doctors who explain, nurses who listen and a team that treats every patient with respect.</p>
+            <ul class="values">
+              <li><strong>Safety first</strong><span>Checked medicines, clean wards and clear handovers between every shift.</span></li>
+              <li><strong>Straight answers</strong><span>We tell you what is wrong, what we recommend and what it will cost, in plain language.</span></li>
+              <li><strong>Care that stays with you</strong><span>We follow up after you go home, because recovery does not end at the door.</span></li>
+            </ul>
+            <!-- ADD: year founded, number of doctors/beds, or the founder's story if you have them -->
+          </div>
+
+          <figure class="wall">
+            <svg viewBox="0 0 400 300" role="img" aria-label="Rows of stone blocks with the first block, the cornerstone, highlighted in teal">
+              <rect x="20" y="220" width="120" height="60" rx="32 4 4 4" fill="#0E7C7B"/>
+              <path d="M62 250h36M80 232v36" stroke="#F8FAF9" stroke-width="5" stroke-linecap="square"/>
+              <rect x="144" y="220" width="130" height="60" rx="4" fill="#12283F"/>
+              <rect x="278" y="220" width="100" height="60" rx="4" fill="#1B3A57"/>
+              <rect x="20" y="156" width="80" height="60" rx="4" fill="#B8C4C1"/>
+              <rect x="104" y="156" width="130" height="60" rx="4" fill="#12283F"/>
+              <rect x="238" y="156" width="140" height="60" rx="4" fill="#8FA0A6"/>
+              <rect x="20" y="92" width="130" height="60" rx="4" fill="#1B3A57"/>
+              <rect x="154" y="92" width="90" height="60" rx="4" fill="#B8C4C1"/>
+              <rect x="248" y="92" width="130" height="60" rx="4" fill="#12283F"/>
+              <rect x="20" y="28" width="100" height="60" rx="4" fill="#8FA0A6"/>
+              <rect x="124" y="28" width="140" height="60" rx="4" fill="#1B3A57"/>
+              <rect x="268" y="28" width="110" height="60" rx="4" fill="#B8C4C1"/>
+            </svg>
+            <figcaption>The first stone, in teal, is the one every other stone is measured against.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Patient information. CONFIRM: visiting hours and payment options -->
+    <section class="section patients" id="patients" aria-labelledby="patients-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="patients-title">Before you visit</h2>
+          <p>A few things that make your visit quicker and easier.</p>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-col">
+            <h3>What to bring</h3>
+            <ul class="checklist">
+              <li>A photo ID</li>
+              <li>Your health insurance card, if you have one</li>
+              <li>Any previous test results or scans</li>
+              <li>A list of medicines you take now</li>
+              <li>Your appointment confirmation</li>
+            </ul>
+          </div>
+
+          <div class="info-col">
+            <h3>Visiting hours</h3>
+            <dl>
+              <dt>Weekdays</dt>
+              <dd>4:00 pm to 7:00 pm</dd>
+              <dt>Weekends and public holidays</dt>
+              <dd>12:00 noon to 7:00 pm</dd>
+              <dt>Maternity and intensive care</dt>
+              <dd>Ask the nurse on duty. Two visitors at a time.</dd>
+            </dl>
+          </div>
+
+          <div class="info-col">
+            <h3>Insurance and payment</h3>
+            <p class="muted">Ask our billing desk which health insurance schemes we accept and for an estimate before any planned procedure.</p>
+            <a href="#contact">Contact billing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact. ADD: street address, phone, email -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="contact-grid">
+          <div>
+            <h2 id="contact-title">Find us and get in touch</h2>
+            <p class="muted">Call for appointments, results and general questions. For emergencies, call the emergency line.</p>
+
+            <ul class="contact-list">
+              <li>
+                <span class="ic"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
+                <div><strong>Reception</strong><a href="tel:08000000000">080 0000 0000</a></div>
+              </li>
+              <li>
+                <span class="ic"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
+                <div><strong>Email</strong><a href="mailto:info@yourhospital.com">info@yourhospital.com</a></div>
+              </li>
+              <li>
+                <span class="ic"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
+                <div><strong>Address</strong><span>ADD: street name, Kabba, Kogi State, Nigeria</span></div>
+              </li>
+            </ul>
+
+            <a class="btn btn-primary" target="_blank" rel="noopener"
+               href="https://www.google.com/maps/search/?api=1&query=Corner+Stone+Hospital+Kabba+Kogi+State">Get directions</a>
+          </div>
+
+          <div class="table-wrap">
+            <table class="hours-table">
+              <caption>Opening times</caption>
+              <tbody>
+                <tr><th scope="row">Emergency department</th><td class="always">Open 24 hours, every day</td></tr>
+                <tr><th scope="row">Outpatient clinics</th><td>Mon to Sat, 8:00 am to 6:00 pm</td></tr>
+                <tr><th scope="row">Laboratory</th><td>Open 24 hours</td></tr>
+                <tr><th scope="row">Pharmacy</th><td>Open 24 hours</td></tr>
+                <tr><th scope="row">Billing desk</th><td>Mon to Fri, 8:00 am to 5:00 pm</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="#top">
+            <svg viewBox="0 0 38 38" aria-hidden="true">
+              <path d="M2 38V14A12 12 0 0 1 14 2h24v36z" fill="#4CD0C3"/>
+              <rect x="15" y="15" width="16" height="16" fill="#12283F"/>
+              <path d="M23 18v10M18 23h10" stroke="#4CD0C3" stroke-width="3" stroke-linecap="square"/>
+            </svg>
+            <span class="brand-name">Corner Stone Hospital<small>Kabba, Kogi State</small></span>
+          </a>
+          <p>Emergency care, maternity, children's health, surgery and laboratory services for the whole family.</p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#patients">Patient information</a></li>
+            <li><a href="#book">Book appointment</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>Emergency: <a href="tel:08000000000">080 0000 0000</a></li>
+            <li>Reception: <a href="tel:08000000000">080 0000 0000</a></li>
+            <li><a href="mailto:info@yourhospital.com">info@yourhospital.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="legal">
+        <p>&copy; <span id="year">2026</span> Corner Stone Hospital, Kabba. All rights reserved.</p>
+        <p>This website does not give medical advice. In an emergency, call the emergency line.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="call-fab" href="tel:08000000000" aria-label="Call emergency line">
+    <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Emergency
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
